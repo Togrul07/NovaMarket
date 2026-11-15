@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}2FA — NovaMarket{% endblock %}
+{% block content %}
+<div class="box" style="max-width:420px;margin:40px auto">
+  <h2 style="margin-top:0">İki faktorlu doğrulama</h2>
+  <p style="color:#5b6577">{{ user }} üçün authenticator tətbiqindəki 6 rəqəmli kodu daxil edin.</p>
+  {% if err %}<p class="err">{{ err }}</p>{% endif %}
+  <form method="post">
+    <label>Kod</label>
+    <input name="code" inputmode="numeric" autocomplete="one-time-code" maxlength="6">
+    <label style="display:block;margin-top:8px"><input type="checkbox" name="remember" style="width:auto"> Bu cihaza bir daha soruşma</label>
+    <button class="btn" style="width:100%;margin-top:10px">Təsdiqlə</button>
+  </form>
+</div>
+{% endblock %}
