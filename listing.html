@@ -1,8 +1,0 @@
-{% extends "base.html" %}
-{% block title %}{{ heading }} — NovaMarket{% endblock %}
-{% block content %}
-<h2 style="margin:20px 0 4px">{{ heading }}</h2>
-{% if err %}<p class="err">Xəta: {{ err }}</p>{% endif %}
-<p style="color:#5b6577;margin:0">{{ products|length }} məhsul tapıldı</p>
-{% include "_grid.html" %}
-{% endblock %}
